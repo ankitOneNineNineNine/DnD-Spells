@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`card should match a snapshot 1`] = `
+<div>
+  <div
+    class="cardContainer"
+  >
+    <h1>
+      Acid Arrow
+    </h1>
+    <h3>
+      Powdered rhubarb leaf and an adder's stomach.
+    </h3>
+    <p>
+      <span>
+        Casting Time: 
+      </span>
+      1 action
+    </p>
+    <p>
+      <span>
+        Components: 
+      </span>
+      verbal, somatic, material
+    </p>
+    <p>
+      <span>
+        Attack Type: 
+      </span>
+      Not Mentioned
+    </p>
+    <p>
+      <span>
+        Classes That Can Learn Spell : 
+      </span>
+      Wizard
+    </p>
+    <p>
+      <span>
+        Level: 
+      </span>
+       
+      2
+    </p>
+    <p>
+      <span>
+         Range of Spell: 
+      </span>
+      90 feet
+    </p>
+    <p>
+      <span>
+        Magic School: 
+      </span>
+      Evocation
+    </p>
+    <p>
+      <span>
+        Higher Level Spell: 
+      </span>
+      When you cast this spell using a spell slot of 3rd…) increases by 1d4 for each slot level above 2nd.
+    </p>
+    <h3>
+      Description
+    </h3>
+    <ul
+      style="list-style-position: inside;"
+    >
+      <li>
+        A shimmering green arrow streaks toward a target w…damage and no damage at the end of its next turn.
+      </li>
+    </ul>
+  </div>
+</div>
+`;

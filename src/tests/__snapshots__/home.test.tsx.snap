@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`home testing match snapshot 1`] = `
+<div>
+  <div>
+    <h1>
+      Dungeons & Dragons Spells
+    </h1>
+    <button
+      aria-label="favorite-btn"
+      class="favoriteButton"
+    >
+      Favorites
+    </button>
+  </div>
+</div>
+`;

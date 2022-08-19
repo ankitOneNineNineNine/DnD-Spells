@@ -1,0 +1,17 @@
+.spellContainer {
+  display: "flex";
+  flex-wrap: "wrap";
+}
+
+.spellContainer > a {
+  color: white;
+  text-decoration: none;
+}
+.favoriteButton {
+  background: #6c4470;
+  padding: 10px;
+  border: 5px;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}

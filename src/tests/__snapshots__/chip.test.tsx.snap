@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`chip should match a snapshot 1`] = `
+<div>
+  <div
+    class="chip"
+    style="background-position: 50px 50px;"
+  >
+    <span>
+      Animal Messenger
+    </span>
+    <div
+      class="wishList"
+      data-testid="wishlistButton"
+    >
+      <i
+        class="fa fa-heart"
+      />
+    </div>
+  </div>
+</div>
+`;

@@ -1,0 +1,45 @@
+.cardContainer {
+  /* box-shadow: 0 0 5px white; */
+  background: url("https://wallpapercave.com/wp/2Hs2O9v.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: black;
+  border: 1px solid #1c1515;
+  background-color: #000;
+  border-radius: 10px;
+  text-align: left;
+  padding: 40px 60px;
+  max-width: 1000px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  z-index: 1;
+  color: #fff;
+}
+.cardContainer::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-radius: 10px;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: -1;
+}
+
+.cardContainer span {
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+.damageContainer {
+  border: 1px solid;
+  padding: 10px;
+}
+
+.cardContainer p {
+  margin-top: 10px;
+}

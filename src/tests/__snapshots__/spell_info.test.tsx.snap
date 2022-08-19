@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`spell info should match a snapshot 1`] = `
+<div>
+  <div>
+    <div
+      class="cardContainer"
+    >
+      <h1 />
+      <h3 />
+      <p>
+        <span>
+          Casting Time: 
+        </span>
+      </p>
+      <p>
+        <span>
+          Components: 
+        </span>
+      </p>
+      <p>
+        <span>
+          Attack Type: 
+        </span>
+        Not Mentioned
+      </p>
+      <p>
+        <span>
+          Classes That Can Learn Spell : 
+        </span>
+      </p>
+      <p>
+        <span>
+          Level: 
+        </span>
+         
+      </p>
+      <p>
+        <span>
+           Range of Spell: 
+        </span>
+      </p>
+      <p>
+        <span>
+          Magic School: 
+        </span>
+      </p>
+      <p>
+        <span>
+          Higher Level Spell: 
+        </span>
+        None
+      </p>
+      <h3>
+        Description
+      </h3>
+      <ul
+        style="list-style-position: inside;"
+      />
+    </div>
+  </div>
+</div>
+`;

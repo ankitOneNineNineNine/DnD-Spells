@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`chip should match a snapshot 1`] = `
+<div>
+  <div
+    class="favoriteContainer"
+  >
+    <h1>
+       Favorite Spells 
+    </h1>
+    <div
+      class="closeModal"
+      data-testid="close-modal"
+    >
+      <i
+        class="fa fa-close"
+      />
+    </div>
+    <div
+      data-testid="favoriteList"
+    />
+  </div>
+</div>
+`;

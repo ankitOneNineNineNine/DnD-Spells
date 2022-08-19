@@ -1,0 +1,20 @@
+.chip {
+  border-radius: 50em;
+  display: inline-flex;
+  margin: 5px;
+  box-shadow: 0 0 1px white;
+  text-align: center;
+  z-index: 9999;
+  padding: 10px;
+  min-width: 200px;
+  cursor: pointer;
+  /* background: url("https://wallpapercave.com/wp/SVhb78h.jpg"); */
+}
+
+.wishList {
+  margin-left: auto;
+}
+
+.wishList:hover {
+  color: purple;
+}

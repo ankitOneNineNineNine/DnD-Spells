@@ -1,0 +1,17 @@
+.favoriteContainer {
+  background: #252525;
+  position: fixed;
+  right: 0px;
+  width: 80%;
+  top: 0px;
+  height: 100vh;
+}
+
+.favoriteContainer .closeModal {
+  left: 0;
+  position: relative;
+  width: 50px;
+  padding: 5px;
+  cursor: pointer;
+  border: 1px solid white;
+}
