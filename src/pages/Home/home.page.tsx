@@ -61,7 +61,7 @@ const Home = () => {
       >
         Favorites
       </button>
-      {!!data?.count && (
+      {data?.count ? (
         <div data-testid="all-spells" className={styles.spellContainer}>
           {data?.results?.map((result) => (
             <NavLink
@@ -82,6 +82,8 @@ const Home = () => {
             </NavLink>
           ))}
         </div>
+      ) : (
+        <p>Loading ...</p>
       )}
 
       {showFavoriteModel && (

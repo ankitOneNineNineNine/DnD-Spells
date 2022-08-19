@@ -22,7 +22,6 @@ export const Favorites: React.FC<IFavoritesProps> = ({ closeModal }) => {
   };
   return (
     <div className={styles.favoriteContainer}>
-      <h1> Favorite Spells </h1>
       <div
         data-testid="close-modal"
         className={styles.closeModal}
@@ -30,6 +29,7 @@ export const Favorites: React.FC<IFavoritesProps> = ({ closeModal }) => {
       >
         <i className="fa fa-close" />
       </div>
+      <h1> Favorite Spells </h1>
       <div data-testid="favoriteList">
         {favoriteContext?.favoriteSpells?.map((spell) => (
           <NavLink to={`/spells/${spell.index}`} key={spell.index}>

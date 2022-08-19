@@ -4,7 +4,7 @@
  */
 export const api = {
   spells: {
-    fetch: "http://www.dnd5eapi.co/api/spells",
-    fetchById: "http://www.dnd5eapi.co/api/spells/{id}",
+    fetch: "https://www.dnd5eapi.co/api/spells",
+    fetchById: "https://www.dnd5eapi.co/api/spells/{id}",
   },
 };
