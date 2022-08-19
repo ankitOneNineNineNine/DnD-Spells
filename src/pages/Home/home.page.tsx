@@ -11,12 +11,25 @@ import { Favorites } from "../Favorites/favorites.pages";
  * @export Home
  * @returns JSX.Element
  */
-
- const Home = () => {
+const Home = () => {
   const { data } = useGetAllSpells();
   const favoriteContext = useContext(FavoriteContext);
   const homePageRef = useRef<HTMLDivElement | null>(null);
   const [showFavoriteModel, setShowFavoriteModel] = useState(false);
+
+  /**
+   * Close Modal
+   */
+  const closeModal = () => {
+    setShowFavoriteModel(false);
+  };
+
+  /**
+   * Open Modal
+   */
+  const openModal = () => {
+    setShowFavoriteModel(true);
+  };
 
   /**
    * Handler to Close Favorites Drawer
@@ -37,12 +50,13 @@ import { Favorites } from "../Favorites/favorites.pages";
       document.removeEventListener("mousedown", handleCloseDrawer);
     };
   }, []);
+
   return (
     <div>
       <h1>Dungeons & Dragons Spells</h1>
       <button
         aria-label="favorite-btn"
-        onClick={(e) => setShowFavoriteModel((show) => !show)}
+        onClick={openModal}
         className={styles.favoriteButton}
       >
         Favorites
@@ -50,7 +64,11 @@ import { Favorites } from "../Favorites/favorites.pages";
       {!!data?.count && (
         <div data-testid="all-spells" className={styles.spellContainer}>
           {data?.results?.map((result) => (
-            <NavLink to={`/spells/${result.index}`} key={result.index}>
+            <NavLink
+              data-testid="chip-nav"
+              to={`/spells/${result.index}`}
+              key={result.index}
+            >
               <Chip
                 favorite={
                   !!favoriteContext?.favoriteSpells.find(
@@ -68,11 +86,11 @@ import { Favorites } from "../Favorites/favorites.pages";
 
       {showFavoriteModel && (
         <div ref={homePageRef}>
-          <Favorites closeModal={() => setShowFavoriteModel(false)} />
+          <Favorites closeModal={closeModal} />
         </div>
       )}
     </div>
   );
 };
 
-export default Home
+export default Home;

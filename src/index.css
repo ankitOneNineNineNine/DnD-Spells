@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 body {
-  background-image: url("https://static2.srcdn.com/wordpress/wp-content/uploads/2017/02/11-tiamat.jpg");
+  background-image: url("./assets//images/background.avif");
   background-repeat: no-repeat;
   background-size: cover;
   margin: 0;

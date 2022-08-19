@@ -7,12 +7,19 @@ import styles from "./favorites.module.css";
 /**
  *
  * Favorites Component
- * @param {IFavoritesProps} props
+ * @param  props
  * @export Favorites
  * @return JSX.Element
  */
 export const Favorites: React.FC<IFavoritesProps> = ({ closeModal }) => {
   const favoriteContext = useContext(FavoriteContext);
+  /**
+   * Change Wish List Function
+   * @param index
+   */
+  const changeWishList = (index: string) => () => {
+    favoriteContext?.onChangeWishList(index);
+  };
   return (
     <div className={styles.favoriteContainer}>
       <h1> Favorite Spells </h1>
@@ -25,12 +32,12 @@ export const Favorites: React.FC<IFavoritesProps> = ({ closeModal }) => {
       </div>
       <div data-testid="favoriteList">
         {favoriteContext?.favoriteSpells?.map((spell) => (
-          <NavLink to={`/spells/${spell.index}`}>
+          <NavLink to={`/spells/${spell.index}`} key={spell.index}>
             <Chip
               text={spell?.name}
               favorite={true}
               index={spell?.index}
-              onHeartClick={() => favoriteContext.onChangeWishList(spell.index)}
+              onHeartClick={changeWishList(spell.index)}
             />
           </NavLink>
         ))}

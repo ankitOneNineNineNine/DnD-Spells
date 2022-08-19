@@ -17,13 +17,14 @@ export const FavoriteContext = createContext<IFavoriteContext | null>(null);
 
 /**
  * FavoriteContextProvider Component
- * @param {ReactNode} {children}
+ * @param  props
  * @export FavoriteContextProvider
  * @returns JSX.Element
  */
-export const FavoriteContextProvider: React.FC<{
-  children: React.ReactNode;
-}> = ({ children }) => {
+export const FavoriteContextProvider: React.FC<
+  IFavoriteContextProviderProps
+> = (props) => {
+  const { children } = props;
   const [favoriteSpells, setFavoriteSpells] = useState<ISpell[]>([]);
   const { data } = useGetAllSpells();
 
@@ -55,3 +56,10 @@ export const FavoriteContextProvider: React.FC<{
     </FavoriteContext.Provider>
   );
 };
+
+/**
+ * interface for FavoriteContextProvider Props
+ */
+interface IFavoriteContextProviderProps {
+  children: React.ReactNode;
+}

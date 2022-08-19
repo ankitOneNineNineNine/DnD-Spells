@@ -4,12 +4,13 @@ import styles from "./card.module.css";
 
 /**
  * Card Component
- * @param {ICardProps} props
+ * @param  props
  * @export Card
  * @returns JSX.Element
  */
 
-export const Card: React.FC<ICardProps> = ({ spell }) => {
+export const Card: React.FC<ICardProps> = (props) => {
+  const { spell } = props;
   return (
     <div className={styles.cardContainer}>
       <h1>{spell?.name}</h1>

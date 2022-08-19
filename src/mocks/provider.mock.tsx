@@ -5,15 +5,16 @@ import { ISpell } from "../services/spells";
 
 /**
  * Provider Mock Component
- * @param {ReactNode}  {children}
- * @param {ISpell[]} {favorites}
+ * @param props
+ * @export ProviderMock
  * @returns JSX.Element
  */
 
 export const ProviderMock: React.FC<{
   children: React.ReactNode;
   favorites: ISpell[];
-}> = ({ children, favorites }) => {
+}> = (props) => {
+  const { children, favorites } = props;
   const contextValues = {
     onChangeWishList: jest.fn(),
     favoriteSpells: favorites,

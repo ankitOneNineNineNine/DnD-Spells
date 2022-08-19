@@ -1,11 +1,10 @@
 .cardContainer {
   /* box-shadow: 0 0 5px white; */
-  background: url("https://wallpapercave.com/wp/2Hs2O9v.jpg");
+  background: url("../../assets/images/Detail-Background.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   color: black;
   border: 1px solid #1c1515;
-  background-color: #000;
   border-radius: 10px;
   text-align: left;
   padding: 40px 60px;

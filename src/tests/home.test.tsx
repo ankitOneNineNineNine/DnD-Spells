@@ -24,9 +24,7 @@ describe("home", () => {
 
   it("testing match snapshot", () => {
     const { container } = prepare();
-    act(() => {
-      expect(container).toMatchSnapshot();
-    });
+    expect(container).toMatchSnapshot();
   });
 
   it("open and close favorites component", async () => {
@@ -51,6 +49,15 @@ describe("home", () => {
     expect(await screen.findByTestId("all-spells")).toBeInTheDocument();
   });
 
+  it("check page change on clicking a chip", async () => {
+    prepare();
+    const currentLink = window.location.pathname;
+    const linkToChip = await screen.findAllByTestId("chip-nav");
+    fireEvent.click(linkToChip[0]);
+    await waitFor(() => {
+      expect(window.location.pathname).not.toBe(currentLink);
+    });
+  });
   it("check error response", async () => {
     server.use(
       rest.get(api.spells.fetch, async (req, res, ctx) => {

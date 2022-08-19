@@ -3,7 +3,7 @@ import styles from "./chip.module.css";
 
 /**
  * Chip Component
- * @param {IChipProps} props
+ * @param  props
  * @export Chip
  * @returns JSX.Element
  */

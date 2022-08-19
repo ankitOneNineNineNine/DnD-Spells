@@ -22,7 +22,7 @@ const queryClient = new QueryClient({
 
 /**
  * Provider Component
- * @param {IProvider} props
+ * @param  props
  * @export Provider
  * @returns JSX.Element
  */
@@ -33,12 +33,10 @@ const Provider: React.FC<IProvider> = (props) => {
       <BrowserRouter>
         <React.Suspense fallback={<p>Loading ...</p>}>
           <Toaster position="bottom-right" />
-          <FavoriteContextProvider>
-            <QueryClientProvider client={queryClient}>
-              {children}
-              <ReactQueryDevtools initialIsOpen={false} />
-            </QueryClientProvider>
-          </FavoriteContextProvider>
+          <QueryClientProvider client={queryClient}>
+            <FavoriteContextProvider>{children}</FavoriteContextProvider>
+            <ReactQueryDevtools initialIsOpen={false} />
+          </QueryClientProvider>
         </React.Suspense>
       </BrowserRouter>
     </React.StrictMode>
