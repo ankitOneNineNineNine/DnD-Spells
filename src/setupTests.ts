@@ -3,8 +3,13 @@
 // expect(element).toHaveTextContent(/react/i)
 // learn more: https://github.com/testing-library/jest-dom
 import "@testing-library/jest-dom";
+import { mockQueryClient } from "./mocks/provider.mock";
+
 import { server } from "./mocks/server.mock";
 
 beforeAll(() => server.listen());
-afterEach(() => server.resetHandlers());
+afterEach(() => {
+  server.resetHandlers();
+  mockQueryClient.clear();
+});
 afterAll(() => server.close());

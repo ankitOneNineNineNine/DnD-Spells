@@ -25,6 +25,7 @@ describe("home", () => {
     prepare();
     const favoriteBtn = screen.getByRole("button", { name: /favorite-btn/i });
     fireEvent.click(favoriteBtn);
+    expect.assertions(2);
     await waitFor(() => {
       const fav = screen.getByText("Favorite Spells");
       expect(fav).toBeInTheDocument();
@@ -40,6 +41,7 @@ describe("home", () => {
 
   it("mock query response check", async () => {
     prepare();
+    expect.assertions(3);
     expect(await screen.findByTestId("all-spells")).toBeInTheDocument();
     await waitFor(() => {
       expect(screen.queryByText("Loading ...")).not.toBeInTheDocument();
@@ -52,6 +54,7 @@ describe("home", () => {
     const currentLink = window.location.href;
     const linkToChip = await screen.findAllByTestId("chip-nav");
     fireEvent.click(linkToChip[0]);
+    expect.assertions(1);
     await waitFor(() => {
       expect(window.location.href).not.toBe(currentLink);
     });
@@ -79,7 +82,6 @@ describe("home", () => {
         return res(ctx.status(500));
       })
     );
-
     prepare();
     await waitFor(() => {
       expect(screen.getByText("Something Went Wrong")).toBeInTheDocument();

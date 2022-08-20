@@ -10,6 +10,14 @@ import { ISpell } from "../services/spells";
  * @returns JSX.Element
  */
 
+export const mockQueryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      retryDelay: 1,
+      retry: 0,
+    },
+  },
+});
 export const ProviderMock: React.FC<{
   children: React.ReactNode;
   favorites: ISpell[];
@@ -22,7 +30,7 @@ export const ProviderMock: React.FC<{
 
   return (
     <BrowserRouter>
-      <QueryClientProvider client={new QueryClient()}>
+      <QueryClientProvider client={mockQueryClient}>
         <FavoriteContext.Provider value={contextValues}>
           {children}
         </FavoriteContext.Provider>
