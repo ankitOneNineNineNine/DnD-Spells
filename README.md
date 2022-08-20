@@ -3,7 +3,7 @@ This project uses DnD api to fetch spells and their respective details.
 
 ## Description
 This project uses DnD v5 API. Read the Docs:http://www.dnd5eapi.co/
-This project fetches spells from api and shows them in chips.
+This project fetches spells from api and shows them in chips. Their corresponding details are also fetched from the api and shown.
 The project is built with Create React App in Typescript. 
 For state management, React Query is used. 
 Testing is Done with Jest and React Testing Library
