@@ -11,12 +11,7 @@ export const Chip: React.FC<IChipProps> = (props) => {
   const { text } = props;
 
   return (
-    <div
-      className={styles.chip}
-      style={{
-        backgroundPosition: "50px 50px",
-      }}
-    >
+    <div className={styles.chip}>
       <span>{text}</span>
       <div
         data-testid="wishlistButton"
