@@ -2,7 +2,9 @@
 
 exports[`spell info should match a snapshot 1`] = `
 <div>
-  <div>
+  <div
+    class="infoContainer"
+  >
     <div
       class="cardContainer"
     >

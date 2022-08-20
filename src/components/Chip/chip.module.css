@@ -9,6 +9,10 @@
   min-width: 200px;
   cursor: pointer;
 }
+.chip:hover {
+  background: rgb(255, 255, 255);
+  color: black;
+}
 
 .wishList {
   margin-left: auto;

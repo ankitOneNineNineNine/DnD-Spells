@@ -4,7 +4,15 @@
   box-sizing: border-box;
 }
 body {
-  background-image: url("./assets//images/background.avif");
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(244, 212, 253, 0.2),
+      rgba(177, 127, 191, 0.5)
+    ),
+    url("./assets/images/background.jpg");
+  min-height: 100vh;
+  background-size: cover;
+  background-position: right;
   background-repeat: no-repeat;
   background-size: cover;
   margin: 0;
@@ -18,7 +26,10 @@ body {
   text-align: center;
   padding: 20px 80px;
 }
-
+h1 {
+  letter-spacing: 2px;
+  font-size: 30px;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;

@@ -1,6 +1,18 @@
 .spellContainer {
   display: "flex";
   flex-wrap: "wrap";
+  height: 83vh;
+  overflow-y: scroll;
+  margin-top: 10px;
+}
+
+.spellContainer::-webkit-scrollbar {
+  display: none;
+}
+
+.spellContainer {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 .spellContainer > a {

@@ -12,7 +12,7 @@ import { Favorites } from "../Favorites/favorites.pages";
  * @returns JSX.Element
  */
 const Home = () => {
-  const { data } = useGetAllSpells();
+  const { data, isLoading, isSuccess } = useGetAllSpells();
   const favoriteContext = useContext(FavoriteContext);
   const homePageRef = useRef<HTMLDivElement | null>(null);
   const [showFavoriteModel, setShowFavoriteModel] = useState(false);
@@ -61,7 +61,8 @@ const Home = () => {
       >
         Favorites
       </button>
-      {data?.count ? (
+      {!isSuccess && <p>Something Went Wrong</p>}
+      {!isLoading ? (
         <div data-testid="all-spells" className={styles.spellContainer}>
           {data?.results?.map((result) => (
             <NavLink

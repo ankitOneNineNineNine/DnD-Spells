@@ -12,6 +12,12 @@ exports[`home testing match snapshot 1`] = `
     >
       Favorites
     </button>
+    <p>
+      Something Went Wrong
+    </p>
+    <p>
+      Loading ...
+    </p>
   </div>
 </div>
 `;

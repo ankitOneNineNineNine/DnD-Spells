@@ -1,12 +1,12 @@
-# Github-Api-Repo-Fetch
-This project uses github unauthenticated api to fetch repositories based on user queries.
+# DnD - Spells
+This project uses DnD api to fetch spells and their respective details.
 
 ## Description
-This project uses unauthenticated github search api: https://api.github.com. Read the Docs: https://docs.github.com/en/rest/guides/getting-started-with-the-rest-api
-This project has simple search bar and dropdowns for sorting and pagination options.
+This project uses DnD v5 API. Read the Docs:http://www.dnd5eapi.co/
+This project fetches spells from api and shows them in chips.
 The project is built with Create React App in Typescript. 
 For state management, React Query is used. 
-
+Testing is Done with Jest and React Testing Library
 
 ## Prerequisite
   * Yarn Package Manager

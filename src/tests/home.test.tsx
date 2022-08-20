@@ -1,10 +1,4 @@
-import {
-  act,
-  fireEvent,
-  render,
-  screen,
-  waitFor,
-} from "@testing-library/react";
+import { fireEvent, render, screen, waitFor } from "@testing-library/react";
 import React from "react";
 import Home from "../pages/Home/home.page";
 import { ProviderMock } from "../mocks/provider.mock";
@@ -47,24 +41,48 @@ describe("home", () => {
   it("mock query response check", async () => {
     prepare();
     expect(await screen.findByTestId("all-spells")).toBeInTheDocument();
+    await waitFor(() => {
+      expect(screen.queryByText("Loading ...")).not.toBeInTheDocument();
+    });
+    expect(screen.queryByTestId("all-spells")?.childNodes.length).not.toBe(0);
   });
 
   it("check page change on clicking a chip", async () => {
     prepare();
-    const currentLink = window.location.pathname;
+    const currentLink = window.location.href;
     const linkToChip = await screen.findAllByTestId("chip-nav");
     fireEvent.click(linkToChip[0]);
     await waitFor(() => {
-      expect(window.location.pathname).not.toBe(currentLink);
+      expect(window.location.href).not.toBe(currentLink);
     });
+  });
+  it("check empty response", async () => {
+    server.use(
+      rest.get(api.spells.fetch, async (req, res, ctx) => {
+        return res(
+          ctx.json({
+            result: [],
+            count: 0,
+          })
+        );
+      })
+    );
+    prepare();
+    await waitFor(() => {
+      expect(screen.queryByText("Loading ...")).not.toBeInTheDocument();
+    });
+    expect(screen.queryByTestId("all-spells")?.childNodes.length).toBe(0);
   });
   it("check error response", async () => {
     server.use(
       rest.get(api.spells.fetch, async (req, res, ctx) => {
-        return res(ctx.json(ctx.status(500)));
+        return res(ctx.status(500));
       })
     );
+
     prepare();
-    expect(screen.queryByTestId("all-spells")).toBe(null);
+    await waitFor(() => {
+      expect(screen.getByText("Something Went Wrong")).toBeInTheDocument();
+    });
   });
 });
