@@ -12,7 +12,7 @@ Testing is Done with Jest and React Testing Library
   * Yarn Package Manager
 ## How to run this project? 
   1. Open terminal in desired drive/folder to clone the project
-  2. git clone https://github.com/ankitOneNineNineNine/Github-Api-Repo-Fetch.git
+  2. git clone https://github.com/ankitOneNineNineNine/DnD-Spells
   3. Inside the Cloned folder, Open terminal.
   3. Write ```yarn```
   4. After the completion, write ```yarn start```
