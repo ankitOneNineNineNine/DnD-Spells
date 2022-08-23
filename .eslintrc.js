@@ -1,13 +1,13 @@
 module.exports = {
   settings: {
     react: {
-      version: "detect",
-    },
+      version: "detect"
+    }
   },
   env: {
     browser: true,
     es2021: true,
-    node: true,
+    node: true
   },
   extends: [
     "eslint:recommended",
@@ -15,15 +15,15 @@ module.exports = {
     "prettier",
     "plugin:prettier/recommended",
     "plugin:@typescript-eslint/eslint-recommended",
-    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended"
   ],
   parser: "@typescript-eslint/parser",
   parserOptions: {
     ecmaFeatures: {
-      jsx: true,
+      jsx: true
     },
     ecmaVersion: 2020,
-    sourceType: "module",
+    sourceType: "module"
   },
   plugins: ["react", "prettier", "jsx-a11y", "import", "@typescript-eslint"],
   rules: {
@@ -33,7 +33,7 @@ module.exports = {
     "react/prop-types": 0,
     "linebreak-style": [
       "error",
-      process.platform === "win32" ? "windows" : "unix",
+      process.platform === "win32" ? "windows" : "unix"
     ],
     "prettier/prettier": "error",
     "arrow-body-style": "off",
@@ -41,6 +41,6 @@ module.exports = {
     "react/react-in-jsx-scope": "off",
     "@typescript-eslint/no-var-requires": "off",
     "@typescript-eslint/ban-ts-comment": "off",
-    "@typescript-eslint/no-explicit-any": "off",
-  },
+    "@typescript-eslint/no-explicit-any": "off"
+  }
 };

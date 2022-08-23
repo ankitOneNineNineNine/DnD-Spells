@@ -33,10 +33,10 @@ const Provider: React.FC<IProvider> = (props) => {
       <BrowserRouter>
         <React.Suspense fallback={<p>Loading ...</p>}>
           <Toaster position="bottom-right" />
-          <ojQueryClientProvider client={queryClient}>
+          <QueryClientProvider client={queryClient}>
             <FavoriteContextProvider>{children}</FavoriteContextProvider>
             <ReactQueryDevtools initialIsOpen={false} />
-          </ojQueryClientProvider>
+          </QueryClientProvider>
         </React.Suspense>
       </BrowserRouter>
     </React.StrictMode>
