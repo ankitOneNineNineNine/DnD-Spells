@@ -16,7 +16,7 @@ The DnD-Spells App is a Dungeons and Dragons App where the list of all the spell
 
 # Prerequisite
   * Yarn Package Manager
-<<<<<<< HEAD
+
   
 # Settting up the App
 - Clone the repo
