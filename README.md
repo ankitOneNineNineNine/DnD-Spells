@@ -1,18 +1,26 @@
-# DnD - Spells
-This project uses DnD api to fetch spells and their respective details.
+# Dungeons and Dragons App Using React
+This project uses DnD v5 API http://www.dnd5eapi.co/ to fetch spells and their respective details. Please find the demo in the description section.
 
-## Description
-This project uses DnD v5 API. Read the Docs:http://www.dnd5eapi.co/
-This project fetches spells from api and shows them in chips.
-The project is built with Create React App in Typescript. 
-For state management, React Query is used. 
-Testing is Done with Jest and React Testing Library
-
-## Prerequisite
+# Prerequisite
   * Yarn Package Manager
-## How to run this project? 
-  1. Open terminal in desired drive/folder to clone the project
-  2. git clone https://github.com/ankitOneNineNineNine/Github-Api-Repo-Fetch.git
-  3. Inside the Cloned folder, Open terminal.
-  3. Write ```yarn```
-  4. After the completion, write ```yarn start```
+  
+# Settting up the App
+- Clone the repo
+- Go inside the project folder
+- Run the command ```yarn```
+- Run the command ```yarn start```
+
+# Tools Used in the App
+- ```React```
+- ```React Query``` - Data Fetching, Caching and State Management
+- ```React Router``` - Route Management
+- ```Typescript``` make the code Statically Typed
+
+# Standarizing the Code
+- Prettier
+- Testing Library
+
+# Available Scripts
+- ```yarn start``` Run the code in development mode
+- ```yarn test``` Run tests
+- ```yarn build``` Build into production ready code
