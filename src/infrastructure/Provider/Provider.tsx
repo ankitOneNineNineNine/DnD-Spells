@@ -15,9 +15,9 @@ const queryClient = new QueryClient({
       retry: false,
       refetchOnWindowFocus: false,
       refetchOnReconnect: true,
-      staleTime: 30 * 1000,
-    },
-  },
+      staleTime: 30 * 1000
+    }
+  }
 });
 
 /**
@@ -33,10 +33,10 @@ const Provider: React.FC<IProvider> = (props) => {
       <BrowserRouter>
         <React.Suspense fallback={<p>Loading ...</p>}>
           <Toaster position="bottom-right" />
-          <QueryClientProvider client={queryClient}>
+          <ojQueryClientProvider client={queryClient}>
             <FavoriteContextProvider>{children}</FavoriteContextProvider>
             <ReactQueryDevtools initialIsOpen={false} />
-          </QueryClientProvider>
+          </ojQueryClientProvider>
         </React.Suspense>
       </BrowserRouter>
     </React.StrictMode>
