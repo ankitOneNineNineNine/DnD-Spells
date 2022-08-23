@@ -1,8 +1,7 @@
 # DnD Spells App Using React
 This project uses DnD v5 to fetch spells and their respective details. Please find the demo in the description section.
 
-<<<<<<< HEAD
-=======
+
 ## Description
 This project uses DnD v5 API. Read the Docs:http://www.dnd5eapi.co/
 This project fetches spells from api and shows them in chips. Their corresponding details are also fetched from the api and shown.
