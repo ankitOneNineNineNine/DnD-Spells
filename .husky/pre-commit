@@ -5,5 +5,4 @@
 # steps to run before commit
 echo "** Running pre-commit steps.... **"
 yarn lint-staged
-yarn test
 echo "** Pre-commit ran successfully! **"

@@ -1,5 +1,10 @@
-# Dungeons and Dragons App Using React
-This project uses DnD v5 API http://www.dnd5eapi.co/ to fetch spells and their respective details. Please find the demo in the description section.
+# DnD Spells App Using React
+This project uses DnD v5 to fetch spells and their respective details. Please find the demo in the description section.
+
+
+# Description
+The DnD-Spells App is a Dungeons and Dragons App where the list of all the spells can be seen. There is also corresponding detail of respective spells. The idea of the app is to show all the spells provided by the API and display a list. Then corresponding details could be seen once a user clicks on preferred spell from the list. 
+
 
 # Prerequisite
   * Yarn Package Manager
