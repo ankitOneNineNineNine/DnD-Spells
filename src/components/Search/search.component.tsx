@@ -2,15 +2,6 @@ import React from "react";
 import styles from "./search.module.css";
 
 /**
- * Interface for Search Props
- */
-
-interface ISearchProps {
-  text: string;
-  onChangeHandler: (value: string) => void;
-}
-
-/**
  * Search Component
  * @param  props
  * @export Search
@@ -29,3 +20,11 @@ export const Search: React.FC<ISearchProps> = (props) => {
     </div>
   );
 };
+
+/**
+ * Interface for Search Props
+ */
+interface ISearchProps {
+  text: string;
+  onChangeHandler: (value: string) => void;
+}
