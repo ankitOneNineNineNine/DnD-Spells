@@ -31,7 +31,7 @@ The DnD-Spells App is a Dungeons and Dragons App where the list of all the spell
 - ```Typescript``` make the code Statically Typed
 
 # Standarizing the Code
-- ESLint
+- ESLint - Airbnb Standard
 - Prettier
 - Testing Library
 

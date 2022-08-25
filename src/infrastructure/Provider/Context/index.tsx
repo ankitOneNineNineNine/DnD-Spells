@@ -33,10 +33,10 @@ export const FavoriteContextProvider: React.FC<
    * @param {string} index
    */
   const onChangeWishList = (index: string) => {
-    const spell = data?.results?.find((spell) => spell.index === index);
+    const spell = data?.results?.find((sp) => sp.index === index);
     if (spell) {
-      if (favoriteSpells.find((spell) => spell.index === index)) {
-        setFavoriteSpells((spells) =>
+      if (favoriteSpells.find((sp) => sp.index === index)) {
+        setFavoriteSpells(() =>
           favoriteSpells.filter((favorite) => favorite.index !== spell.index)
         );
       } else {
@@ -49,7 +49,7 @@ export const FavoriteContextProvider: React.FC<
     <FavoriteContext.Provider
       value={{
         onChangeWishList,
-        favoriteSpells,
+        favoriteSpells
       }}
     >
       {children}

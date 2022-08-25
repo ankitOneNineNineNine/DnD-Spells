@@ -14,9 +14,9 @@ export const mockQueryClient = new QueryClient({
   defaultOptions: {
     queries: {
       retryDelay: 1,
-      retry: 0,
-    },
-  },
+      retry: 0
+    }
+  }
 });
 export const ProviderMock: React.FC<{
   children: React.ReactNode;
@@ -25,7 +25,7 @@ export const ProviderMock: React.FC<{
   const { children, favorites } = props;
   const contextValues = {
     onChangeWishList: jest.fn(),
-    favoriteSpells: favorites,
+    favoriteSpells: favorites
   };
 
   return (

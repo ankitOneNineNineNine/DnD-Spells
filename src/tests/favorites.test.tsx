@@ -8,7 +8,7 @@ describe("chip", () => {
   function prepare(favorites: ISpell[]) {
     const { container } = render(
       <ProviderMock favorites={favorites}>
-        <Favorites closeModal={() => {}} />
+        <Favorites closeModal={() => undefined} />
       </ProviderMock>
     );
     return { container };
@@ -30,8 +30,8 @@ describe("chip", () => {
       {
         name: "Animal Messenger",
         index: "animal-messenger",
-        url: "/api/spells/animal-messenger",
-      },
+        url: "/api/spells/animal-messenger"
+      }
     ]);
     const favoriteList = screen.getByTestId("favoriteList");
     expect(favoriteList.childNodes.length).toBe(1);

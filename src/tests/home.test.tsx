@@ -1,9 +1,9 @@
 import { fireEvent, render, screen, waitFor } from "@testing-library/react";
 import React from "react";
+import { rest } from "msw";
 import Home from "../pages/Home/home.page";
 import { ProviderMock } from "../mocks/provider.mock";
 import { server } from "../mocks/server.mock";
-import { rest } from "msw";
 import { api } from "../services/api";
 
 describe("home", () => {
@@ -65,7 +65,7 @@ describe("home", () => {
         return res(
           ctx.json({
             result: [],
-            count: 0,
+            count: 0
           })
         );
       })

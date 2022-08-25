@@ -5,8 +5,8 @@ const toastSuccess = (message: string) => {
     id: message,
     style: {
       border: "1px solid green",
-      padding: "12px",
-    },
+      padding: "12px"
+    }
   });
 };
 
@@ -15,8 +15,8 @@ const toastFail = (message: string) => {
     id: message,
     style: {
       border: "1px solid red",
-      padding: "12px",
-    },
+      padding: "12px"
+    }
   });
 };
 
@@ -32,11 +32,11 @@ const toastPromise = (
     {
       loading: loadingMessage ?? "Saving...",
       success: successMessage ?? "Success!",
-      error: errorMessage ?? "Error!",
+      error: errorMessage ?? "Error!"
     },
     {
       position: "bottom-center",
-      id: id,
+      id: id
     }
   );
 };

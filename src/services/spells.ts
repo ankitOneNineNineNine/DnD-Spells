@@ -20,7 +20,7 @@ type IDamageType = ISpell;
 export const Componentsenum: { [key: string]: any } = {
   V: "verbal",
   S: "somatic",
-  M: "material",
+  M: "material"
 };
 export interface ISpellInfo {
   casting_time?: string;
@@ -88,7 +88,7 @@ export const useGetAllSpells = () => {
       }>
     ) => {
       toastFail(error?.response?.data?.message || "Something Went Wrong");
-    },
+    }
   });
 };
 
@@ -108,6 +108,6 @@ export const useGetSpellByIndex = (id: string) => {
       }>
     ) => {
       toastFail(error?.response?.data?.message || "Something Went Wrong");
-    },
+    }
   });
 };

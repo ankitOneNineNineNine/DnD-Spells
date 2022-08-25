@@ -2,12 +2,14 @@
   border-radius: 50em;
   display: inline-flex;
   margin: 5px;
+  color: palegoldenrod;
   box-shadow: 0 0 1px white;
   text-align: center;
   z-index: 9999;
   padding: 10px;
-  min-width: 200px;
+  min-width: 250px;
   cursor: pointer;
+  background-color: rgba(6, 2, 8, 0.5);
 }
 .chip:hover {
   background: rgb(255, 255, 255);
@@ -20,4 +22,10 @@
 
 .wishList:hover {
   color: purple;
+}
+
+@media only screen and (max-width: 400px) {
+  .chip {
+    width: 80%;
+  }
 }

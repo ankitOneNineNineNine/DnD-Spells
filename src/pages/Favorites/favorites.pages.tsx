@@ -50,5 +50,5 @@ export const Favorites: React.FC<IFavoritesProps> = ({ closeModal }) => {
  * interface for Favorite Props
  */
 interface IFavoritesProps {
-  closeModal: () => void;
+  closeModal: () => void | undefined;
 }

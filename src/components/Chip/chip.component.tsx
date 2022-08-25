@@ -2,6 +2,16 @@ import React from "react";
 import styles from "./chip.module.css";
 
 /**
+ * interface for Chip Props
+ */
+interface IChipProps {
+  text: string;
+  favorite: boolean;
+  index: string;
+  onHeartClick?: (index: string) => void | undefined;
+}
+
+/**
  * Chip Component
  * @param  props
  * @export Chip
@@ -28,13 +38,3 @@ export const Chip: React.FC<IChipProps> = (props) => {
     </div>
   );
 };
-
-/**
- * interface for Chip Props
- */
-interface IChipProps {
-  text: string;
-  favorite: boolean;
-  index: string;
-  onHeartClick?: (index: string) => void | undefined;
-}

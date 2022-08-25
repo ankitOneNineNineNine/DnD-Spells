@@ -12,6 +12,15 @@ exports[`home testing match snapshot 1`] = `
     >
       Favorites
     </button>
+    <div
+      class="search-container"
+    >
+      <input
+        placeholder="Search Spells Here ..."
+        type="search"
+        value=""
+      />
+    </div>
     <p>
       Loading ...
     </p>

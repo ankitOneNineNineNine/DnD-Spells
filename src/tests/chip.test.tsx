@@ -10,7 +10,7 @@ import { ProviderMock } from "../mocks/provider.mock";
 const mockSpellInfo = {
   name: "Animal Messenger",
   index: "animal-messenger",
-  url: "/api/spells/animal-messenger",
+  url: "/api/spells/animal-messenger"
 };
 
 describe("chip", () => {
@@ -21,7 +21,7 @@ describe("chip", () => {
           favorite={false}
           text={mockSpellInfo.name}
           index={mockSpellInfo.index}
-          onHeartClick={() => {}}
+          onHeartClick={() => undefined}
         />
       </ProviderMock>
     );

@@ -8,13 +8,13 @@ const mockSpells = [
   {
     name: "Animal Messenger",
     index: "animal-messenger",
-    url: "/api/spells/animal-messenger",
+    url: "/api/spells/animal-messenger"
   },
   {
     index: "etherealness",
     name: "Etherealness",
-    url: "/api/spells/etherealness",
-  },
+    url: "/api/spells/etherealness"
+  }
 ];
 
 /**
@@ -26,7 +26,7 @@ export const server = setupServer(
     return res(
       ctx.json({
         results: mockSpells,
-        count: mockSpells.length,
+        count: mockSpells.length
       })
     );
   })

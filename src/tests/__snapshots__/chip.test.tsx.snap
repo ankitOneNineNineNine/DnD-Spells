@@ -4,7 +4,6 @@ exports[`chip should match a snapshot 1`] = `
 <div>
   <div
     class="chip"
-    style="background-position: 50px 50px;"
   >
     <span>
       Animal Messenger
