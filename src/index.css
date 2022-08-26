@@ -56,3 +56,9 @@ a {
   background: #ddd;
   border-radius: 10px;
 }
+
+@media only screen and (max-width: 400px) {
+  #root {
+    padding: 0;
+  }
+}

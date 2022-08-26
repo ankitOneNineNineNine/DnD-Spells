@@ -5,22 +5,15 @@
   text-align: left;
   padding: 40px 60px;
   max-width: 1000px;
+  height: 90vh;
   position: relative;
   width: 100%;
   z-index: 1;
   color: #fff;
+  overflow-y: scroll;
+  background: rgba(0, 0, 0, 0.8);
 }
-.cardContainer::after {
-  position: absolute;
-  content: "";
-  top: 0;
-  left: 0;
-  width: 100%;
-  border-radius: 10px;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.7);
-  z-index: -1;
-}
+
 .cardContainer ul {
   list-style-position: "inside";
 }
@@ -37,4 +30,13 @@
 
 .cardContainer p {
   margin-top: 10px;
+}
+
+@media only screen and (max-width: 400px) {
+  .cardContainer {
+    width: 100%;
+    padding: 5%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+  }
 }
