@@ -21,12 +21,12 @@ const Home = () => {
   const [searchQuery, setSearchQuery] = useState("");
 
   /**
-   * debounced search (1s after user stops typing)
+   * debounced search (500ms after user stops typing)
    */
   const debouncedSearch = useRef(
     _.debounce((searchTerm) => {
       setSearchQuery(searchTerm);
-    }, 1000)
+    }, 500)
   ).current;
 
   useEffect(() => {
@@ -83,7 +83,7 @@ const Home = () => {
       >
         Favorites
       </button>
-      <Search text={searchQuery} onChangeHandler={setSearchQuery} />
+      <Search onChangeHandler={debouncedSearch} />
       {isError ? (
         <p>Something Went Wrong</p>
       ) : isLoading ? (
